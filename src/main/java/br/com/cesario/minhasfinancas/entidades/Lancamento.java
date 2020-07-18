@@ -1,12 +1,14 @@
 package br.com.cesario.minhasfinancas.entidades;
 
+import lombok.*;
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Objects;
 
+@Data
+@Builder
 @Entity
 @Table(name = "lancamento", schema = "financas")
 public class Lancamento {
@@ -39,47 +41,6 @@ public class Lancamento {
 
     @Column(name = "status")
     @Enumerated(value = EnumType.STRING)
-    private SttatusLancamento status;
+    private StatusLancamento status;
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Lancamento that = (Lancamento) o;
-        return id == that.id &&
-                mes.equals(that.mes) &&
-                ano.equals(that.ano) &&
-                usuario.equals(that.usuario) &&
-                valor.equals(that.valor) &&
-                dataCadastro.equals(that.dataCadastro) &&
-                tipo == that.tipo &&
-                status == that.status;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, mes, ano, usuario, valor, dataCadastro, tipo, status);
-    }
-
-    @Override
-    public String toString() {
-        return "Lancamento{" +
-                "id=" + id +
-                ", mes=" + mes +
-                ", ano=" + ano +
-                ", usuario=" + usuario +
-                ", valor=" + valor +
-                ", dataCadastro=" + dataCadastro +
-                ", tipo=" + tipo +
-                ", status=" + status +
-                '}';
-    }
 }

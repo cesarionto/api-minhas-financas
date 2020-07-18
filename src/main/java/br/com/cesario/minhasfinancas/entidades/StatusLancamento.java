@@ -1,6 +1,6 @@
 package br.com.cesario.minhasfinancas.entidades;
 
-public enum SttatusLancamento {
+public enum StatusLancamento {
     PENDENTE,
     CANCELADO,
     EFETIVADO
