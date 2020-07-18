@@ -1,4 +1,4 @@
-package br.com.cesario.minhasfinancas.models;
+package br.com.cesario.minhasfinancas.models.entidades;
 
 import br.com.cesario.minhasfinancas.enums.StatusLancamento;
 import br.com.cesario.minhasfinancas.enums.TipoLancamento;
