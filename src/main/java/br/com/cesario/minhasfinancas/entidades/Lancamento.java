@@ -1,5 +1,7 @@
 package br.com.cesario.minhasfinancas.entidades;
 
+import br.com.cesario.minhasfinancas.enums.StatusLancamento;
+import br.com.cesario.minhasfinancas.enums.TipoLancamento;
 import lombok.*;
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
