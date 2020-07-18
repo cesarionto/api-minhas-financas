@@ -1,10 +1,14 @@
 package br.com.cesario.minhasfinancas.service.implementations;
 
+import br.com.cesario.minhasfinancas.excepion.ErroAutenticacao;
 import br.com.cesario.minhasfinancas.excepion.RegraNegocioExcepcion;
 import br.com.cesario.minhasfinancas.models.JpaRepository.UsuarioRepository;
 import br.com.cesario.minhasfinancas.models.entidades.Usuario;
 import br.com.cesario.minhasfinancas.service.UsuarioService;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+
 
 @Service
 public class UsuarioServiceImplementation implements UsuarioService {
@@ -18,12 +22,22 @@ public class UsuarioServiceImplementation implements UsuarioService {
 
     @Override
     public Usuario autenticar(String email, String senha) {
-        return null;
+        Optional<Usuario> usuarioOptional = usuarioRepository.findByEmail(email);
+
+        if(usuarioOptional.isPresent()){
+            throw new ErroAutenticacao("Usuario não encontrado para o email informado");
+        }
+        if (usuarioOptional.get().getSenha().equals(senha)){
+            throw new ErroAutenticacao("Senha Invalida");
+        }
+
+        return usuarioOptional.get();
     }
 
     @Override
     public Usuario salvarUsuario(Usuario usuario) {
-        return null;
+        validarEmail(usuario.getEmail());
+        return usuarioRepository.save(usuario);
     }
 
     @Override
