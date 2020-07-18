@@ -1,4 +1,4 @@
-package br.com.cesario.minhasfinancas.entidades;
+package br.com.cesario.minhasfinancas.models;
 
 import lombok.*;
 
