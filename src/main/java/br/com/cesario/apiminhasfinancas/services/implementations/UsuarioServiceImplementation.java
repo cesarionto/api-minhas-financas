@@ -1,10 +1,10 @@
-package br.com.cesario.apiminhasfinancas.service.implementations;
+package br.com.cesario.apiminhasfinancas.services.implementations;
 
 import br.com.cesario.apiminhasfinancas.excepions.ErroAutenticacaoException;
 import br.com.cesario.apiminhasfinancas.excepions.RegraNegocioExcepcion;
 import br.com.cesario.apiminhasfinancas.models.JpaRepository.UsuarioRepository;
 import br.com.cesario.apiminhasfinancas.models.entidades.Usuario;
-import br.com.cesario.apiminhasfinancas.service.UsuarioService;
+import br.com.cesario.apiminhasfinancas.services.UsuarioService;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
