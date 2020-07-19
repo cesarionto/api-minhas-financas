@@ -1,6 +1,6 @@
-package br.com.cesario.minhasfinancas.models.JpaRepository;
+package br.com.cesario.apiminhasfinancas.models.JpaRepository;
 
-import br.com.cesario.minhasfinancas.models.entidades.Usuario;
+import br.com.cesario.apiminhasfinancas.models.entidades.Usuario;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

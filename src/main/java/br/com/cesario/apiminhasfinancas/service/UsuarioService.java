@@ -1,6 +1,6 @@
-package br.com.cesario.minhasfinancas.service;
+package br.com.cesario.apiminhasfinancas.service;
 
-import br.com.cesario.minhasfinancas.models.entidades.Usuario;
+import br.com.cesario.apiminhasfinancas.models.entidades.Usuario;
 
 public interface UsuarioService {
 

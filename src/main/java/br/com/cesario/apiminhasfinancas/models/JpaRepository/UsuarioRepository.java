@@ -1,7 +1,6 @@
-package br.com.cesario.minhasfinancas.models.JpaRepository;
+package br.com.cesario.apiminhasfinancas.models.JpaRepository;
 
-import br.com.cesario.minhasfinancas.models.entidades.Usuario;
-import org.springframework.data.domain.Example;
+import br.com.cesario.apiminhasfinancas.models.entidades.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

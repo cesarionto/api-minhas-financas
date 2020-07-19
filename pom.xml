@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>br.com.cesario</groupId>
-    <artifactId>minhasfinancas</artifactId>
+    <artifactId>api-minhas-financas</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>minhasfinancas</name>
+    <name>api-minhas-financas</name>
     <description>Projeto de gerenciamento de finanças pessoais.</description>
 
     <properties>

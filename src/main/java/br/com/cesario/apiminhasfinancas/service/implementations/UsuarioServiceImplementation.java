@@ -1,10 +1,10 @@
-package br.com.cesario.minhasfinancas.service.implementations;
+package br.com.cesario.apiminhasfinancas.service.implementations;
 
-import br.com.cesario.minhasfinancas.excepion.ErroAutenticacao;
-import br.com.cesario.minhasfinancas.excepion.RegraNegocioExcepcion;
-import br.com.cesario.minhasfinancas.models.JpaRepository.UsuarioRepository;
-import br.com.cesario.minhasfinancas.models.entidades.Usuario;
-import br.com.cesario.minhasfinancas.service.UsuarioService;
+import br.com.cesario.apiminhasfinancas.excepions.ErroAutenticacaoException;
+import br.com.cesario.apiminhasfinancas.excepions.RegraNegocioExcepcion;
+import br.com.cesario.apiminhasfinancas.models.JpaRepository.UsuarioRepository;
+import br.com.cesario.apiminhasfinancas.models.entidades.Usuario;
+import br.com.cesario.apiminhasfinancas.service.UsuarioService;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -25,10 +25,10 @@ public class UsuarioServiceImplementation implements UsuarioService {
         Optional<Usuario> usuarioOptional = usuarioRepository.findByEmail(email);
 
         if(usuarioOptional.isPresent()){
-            throw new ErroAutenticacao("Usuario não encontrado para o email informado");
+            throw new ErroAutenticacaoException("Usuario não encontrado para o email informado");
         }
         if (usuarioOptional.get().getSenha().equals(senha)){
-            throw new ErroAutenticacao("Senha Invalida");
+            throw new ErroAutenticacaoException("Senha Invalida");
         }
 
         return usuarioOptional.get();

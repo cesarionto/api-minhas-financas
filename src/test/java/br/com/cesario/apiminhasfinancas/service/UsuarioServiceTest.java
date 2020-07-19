@@ -1,9 +1,8 @@
-package br.com.cesario.minhasfinancas.service;
+package br.com.cesario.apiminhasfinancas.service;
 
-import br.com.cesario.minhasfinancas.excepion.RegraNegocioExcepcion;
-import br.com.cesario.minhasfinancas.models.JpaRepository.UsuarioRepository;
-import br.com.cesario.minhasfinancas.models.entidades.Usuario;
-import org.junit.jupiter.api.Assertions;
+import br.com.cesario.apiminhasfinancas.excepions.RegraNegocioExcepcion;
+import br.com.cesario.apiminhasfinancas.models.JpaRepository.UsuarioRepository;
+import br.com.cesario.apiminhasfinancas.models.entidades.Usuario;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

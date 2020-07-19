@@ -1,7 +1,7 @@
-package br.com.cesario.minhasfinancas.models.entidades;
+package br.com.cesario.apiminhasfinancas.models.entidades;
 
-import br.com.cesario.minhasfinancas.enums.StatusLancamento;
-import br.com.cesario.minhasfinancas.enums.TipoLancamento;
+import br.com.cesario.apiminhasfinancas.enums.StatusLancamento;
+import br.com.cesario.apiminhasfinancas.enums.TipoLancamento;
 import lombok.*;
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 

@@ -1,4 +1,4 @@
-package br.com.cesario.minhasfinancas.enums;
+package br.com.cesario.apiminhasfinancas.enums;
 
 public enum TipoLancamento {
     RECEITA,
