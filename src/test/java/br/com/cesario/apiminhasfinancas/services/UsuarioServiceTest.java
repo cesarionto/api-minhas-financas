@@ -34,7 +34,8 @@ public class UsuarioServiceTest {
 
     @Test
     public void deveLancarErroAoValidarEmailQuandoExistirEmailCadastrado(){
-        Usuario usuario = Usuario.builder().email("cesario@cesario.com").build();
+        Usuario usuario = new Usuario();
+        usuario.setEmail("usuario@usuario.com");
         usuarioRepository.save(usuario);
 
         Exception exception = assertThrows(RegraNegocioExcepcion.class, () -> {

@@ -6,6 +6,7 @@ import br.com.cesario.apiminhasfinancas.models.JpaRepository.UsuarioRepository;
 import br.com.cesario.apiminhasfinancas.models.entidades.Usuario;
 import br.com.cesario.apiminhasfinancas.services.UsuarioService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -24,10 +25,10 @@ public class UsuarioServiceImplementation implements UsuarioService {
     public Usuario autenticar(String email, String senha) {
         Optional<Usuario> usuarioOptional = usuarioRepository.findByEmail(email);
 
-        if(usuarioOptional.isPresent()){
+        if(!usuarioOptional.isPresent()){
             throw new ErroAutenticacaoException("Usuario não encontrado para o email informado");
         }
-        if (usuarioOptional.get().getSenha().equals(senha)){
+        if (!usuarioOptional.get().getSenha().equals(senha)){
             throw new ErroAutenticacaoException("Senha Invalida");
         }
 
@@ -35,6 +36,7 @@ public class UsuarioServiceImplementation implements UsuarioService {
     }
 
     @Override
+    @Transactional
     public Usuario salvarUsuario(Usuario usuario) {
         validarEmail(usuario.getEmail());
         return usuarioRepository.save(usuario);

@@ -20,7 +20,8 @@ public class UsuarioRepositoryTest {
     @Test
     public void deveVerificarAExisteciaDeUmEmail(){
         //cenario
-        Usuario usuario = Usuario.builder().nome("Cesário").email("cesario@gmail.com").senha("789456").build();
+        Usuario usuario = new Usuario();
+        usuario.setEmail("cesario@cesario.com");
         usuarioRepository.save(usuario);
         //ação
         boolean resultado = usuarioRepository.existsByEmail("cesario@gmail.com");

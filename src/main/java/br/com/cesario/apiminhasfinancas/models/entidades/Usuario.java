@@ -4,8 +4,9 @@ import lombok.*;
 
 import javax.persistence.*;
 
-@Data
-@Builder
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "usuario", schema = "financas")
 public class Usuario {
