@@ -9,8 +9,9 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Data
-@Builder
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "lancamento", schema = "financas")
 public class Lancamento {
@@ -19,6 +20,9 @@ public class Lancamento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private long id;
+
+    @Column(name = "descricao")
+    private String descricao;
 
     @Column(name = "mes")
     private Integer mes;

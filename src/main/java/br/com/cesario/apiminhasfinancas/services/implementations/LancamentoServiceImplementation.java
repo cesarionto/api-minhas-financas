@@ -41,7 +41,7 @@ public class LancamentoServiceImplementation implements LancamentoService {
     }
 
     @Override
-    @Transactional
+    @Transactional(readOnly = true)
     public List<Lancamento> buscar(Lancamento lancamentoFiltro) {
         Example example = Example.of(lancamentoFiltro,
                 ExampleMatcher.matching()
@@ -55,5 +55,10 @@ public class LancamentoServiceImplementation implements LancamentoService {
         lancamento.setStatus(statusLancamento);
         atualizar(lancamento);
 
+    }
+
+    @Override
+    public void validar(Lancamento lancamento) {
+        
     }
 }
