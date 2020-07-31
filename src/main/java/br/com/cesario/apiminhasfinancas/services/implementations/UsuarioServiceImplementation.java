@@ -1,5 +1,6 @@
 package br.com.cesario.apiminhasfinancas.services.implementations;
 
+import br.com.cesario.apiminhasfinancas.enums.TipoLancamento;
 import br.com.cesario.apiminhasfinancas.excepions.ErroAutenticacaoException;
 import br.com.cesario.apiminhasfinancas.excepions.RegraNegocioExcepcion;
 import br.com.cesario.apiminhasfinancas.models.JpaRepository.UsuarioRepository;
@@ -8,6 +9,7 @@ import br.com.cesario.apiminhasfinancas.services.UsuarioService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.math.BigDecimal;
 import java.util.Optional;
 
 
@@ -54,6 +56,8 @@ public class UsuarioServiceImplementation implements UsuarioService {
     public Optional<Usuario> getUsuarioById(long id) {
         return usuarioRepository.findById(id);
     }
+
+
 }
 
 

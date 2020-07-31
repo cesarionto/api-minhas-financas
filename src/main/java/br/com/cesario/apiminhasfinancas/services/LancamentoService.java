@@ -3,7 +3,9 @@ package br.com.cesario.apiminhasfinancas.services;
 import br.com.cesario.apiminhasfinancas.enums.StatusLancamento;
 import br.com.cesario.apiminhasfinancas.models.entidades.Lancamento;
 
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.Optional;
 
 public interface LancamentoService {
 
@@ -13,9 +15,13 @@ public interface LancamentoService {
 
     void deletar(Lancamento lancamento);
 
-    List<Lancamento> buscar (Lancamento lancamentoFiltro);
+    List<Lancamento> buscar(Lancamento lancamentoFiltro);
 
     void atualizarStatus(Lancamento lancamento, StatusLancamento statusLancamento);
 
     void validar(Lancamento lancamento);
+
+    Optional<Lancamento> getLancamentoById(long id);
+
+    BigDecimal obterSaldoPorUsuario(Long id);
 }
