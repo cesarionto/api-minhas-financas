@@ -1,4 +1,4 @@
-package br.com.cesario.apiminhasfinancas.services;
+package br.com.cesario.apiminhasfinancas.services.interfaces;
 
 import br.com.cesario.apiminhasfinancas.models.entidades.Usuario;
 

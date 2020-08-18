@@ -1,8 +1,9 @@
 package br.com.cesario.apiminhasfinancas.services;
 
 import br.com.cesario.apiminhasfinancas.excepions.RegraNegocioExcepcion;
-import br.com.cesario.apiminhasfinancas.models.JpaRepository.UsuarioRepository;
+import br.com.cesario.apiminhasfinancas.models.repositories.UsuarioRepository;
 import br.com.cesario.apiminhasfinancas.models.entidades.Usuario;
+import br.com.cesario.apiminhasfinancas.services.interfaces.UsuarioService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

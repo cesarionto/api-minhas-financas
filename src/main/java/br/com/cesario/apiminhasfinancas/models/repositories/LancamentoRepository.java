@@ -1,4 +1,4 @@
-package br.com.cesario.apiminhasfinancas.models.JpaRepository;
+package br.com.cesario.apiminhasfinancas.models.repositories;
 
 import br.com.cesario.apiminhasfinancas.enums.TipoLancamento;
 import br.com.cesario.apiminhasfinancas.models.entidades.Lancamento;
