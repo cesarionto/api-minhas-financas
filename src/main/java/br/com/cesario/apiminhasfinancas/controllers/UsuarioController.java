@@ -6,6 +6,7 @@ import br.com.cesario.apiminhasfinancas.excepions.RegraNegocioExcepcion;
 import br.com.cesario.apiminhasfinancas.models.entidades.Usuario;
 import br.com.cesario.apiminhasfinancas.services.interfaces.LancamentoService;
 import br.com.cesario.apiminhasfinancas.services.interfaces.UsuarioService;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,10 +18,11 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/usuarios")
 @RequiredArgsConstructor
+@AllArgsConstructor
 public class UsuarioController {
 
-    private final UsuarioService usuarioService;
-    private final LancamentoService lancamentoService;
+    private UsuarioService usuarioService;
+    private LancamentoService lancamentoService;
 
     @PostMapping("/autenticar")
     public ResponseEntity autenticar(@RequestBody UsuarioDTO usuarioDTO){

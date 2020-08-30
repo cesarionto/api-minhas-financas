@@ -1,13 +1,11 @@
 package br.com.cesario.apiminhasfinancas.dto;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-
-@NoArgsConstructor
+@Builder
 @Getter
 @Setter
+@AllArgsConstructor
 public class UsuarioDTO {
     private String email, nome, senha;
 }
