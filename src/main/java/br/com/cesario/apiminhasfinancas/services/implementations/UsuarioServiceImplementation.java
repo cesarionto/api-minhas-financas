@@ -5,6 +5,8 @@ import br.com.cesario.apiminhasfinancas.excepions.RegraNegocioExcepcion;
 import br.com.cesario.apiminhasfinancas.models.repositories.UsuarioRepository;
 import br.com.cesario.apiminhasfinancas.models.entidades.Usuario;
 import br.com.cesario.apiminhasfinancas.services.interfaces.UsuarioService;
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,14 +14,10 @@ import java.util.Optional;
 
 
 @Service
+@AllArgsConstructor
 public class UsuarioServiceImplementation implements UsuarioService {
 
     private UsuarioRepository usuarioRepository;
-
-    public UsuarioServiceImplementation(UsuarioRepository usuarioRepository) {
-        super();
-        this.usuarioRepository = usuarioRepository;
-    }
 
     @Override
     public Usuario autenticar(String email, String senha) {

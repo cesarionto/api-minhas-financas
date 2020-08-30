@@ -9,6 +9,7 @@ import br.com.cesario.apiminhasfinancas.models.entidades.Lancamento;
 import br.com.cesario.apiminhasfinancas.models.entidades.Usuario;
 import br.com.cesario.apiminhasfinancas.services.interfaces.LancamentoService;
 import br.com.cesario.apiminhasfinancas.services.interfaces.UsuarioService;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,11 +20,11 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/lancamentos")
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class LancamentoController {
 
-    private final LancamentoService lancamentoService;
-    private final UsuarioService usuarioService;
+    private LancamentoService lancamentoService;
+    private UsuarioService usuarioService;
 
     @PostMapping
     public ResponseEntity salvar(@RequestBody LancamentoDTO lancamentoDTO) {
