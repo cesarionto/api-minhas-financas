@@ -13,5 +13,30 @@ Esta API foi desenvolvida durante o curso ["Spring Boot + React JS: Desenvolva A
 - Escrita do código repetitivo feito com o auxílio do [Lombok](https://www.projectlombok.org).
 - Testes de requisição com o [Postman](https://www.postman.com/).
 
+# Utilizando a API
 
+- **!IMPORTANTE!** Clone o repositório [Minhas Financas - REACT APP - By Cesário Pereira Neto](https://github.com/cesarionto/minhas-financas-app/) pois este trata-se do front-end da API.
+- Instale o [JDK 1.8](https://www.oracle.com/br/java/technologies/javase/javase-jdk8-downloads.html)
+- Instale o [Eclipse IDE](https://www.eclipse.org/downloads/) e importe o projeto maven.
+- Instale o [PostgresSQL](https://www.postgresql.org) de forma que o usuário e senha sejam postgres(ambus) e adicione o caminho (C:\Program Files\PostgreSQL\[versão]\bin) ao path.
+- Crie uma base de dados: 
+  ```cmd
+  psql -U postgres;
+  ```
+  
+  ```cmd
+  create database minhasfinancasapi;
+  ```
+  
+  ```cmd
+  \c minhasfinancasapi;
+  ```
+  
+  ```cmd
+  create schema financas;
+  ```
+  
+PS: O Springdata fará o mapeamento das tabelas.
+- Execute o projeto java.
+- Agora, Siga as instruções do [README.md](https://github.com/cesarionto/minhas-financas-app/blob/master/README.md) da aplicação REACT.
 
