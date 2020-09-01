@@ -22,7 +22,6 @@ public class UsuarioServiceImplementation implements UsuarioService {
     @Override
     public Usuario autenticar(String email, String senha) {
         Optional<Usuario> usuarioOptional = usuarioRepository.findByEmail(email);
-
         if(!usuarioOptional.isPresent()){
             throw new ErroAutenticacaoException("Usuario não encontrado para o email informado");
         }
