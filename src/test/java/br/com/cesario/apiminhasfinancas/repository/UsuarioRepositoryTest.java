@@ -1,6 +1,7 @@
-package br.com.cesario.apiminhasfinancas.models.repositories;
+package br.com.cesario.apiminhasfinancas.repository;
 
 import br.com.cesario.apiminhasfinancas.models.entidades.Usuario;
+import br.com.cesario.apiminhasfinancas.models.repositories.UsuarioRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
