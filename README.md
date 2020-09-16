@@ -12,7 +12,7 @@ Esta API foi desenvolvida durante o curso ["Spring Boot + React JS: Desenvolva A
 - Persistência de dados feito com o SGBD [PostgresSQL](https://www.postgresql.org).
 - Escrita do código repetitivo feito com o auxílio do [Lombok](https://www.projectlombok.org).
 - Testes de requisição com o [Postman](https://www.postman.com/).
-
+- Testes de unidade com o [JUnit 5](https://junit.org/junit5/).
 # Utilizando a API
 
 - **!IMPORTANTE!** Clone o repositório [Minhas Financas - REACT APP - By Cesário Pereira Neto](https://github.com/cesarionto/minhas-financas-app/) pois este trata-se do front-end da API.
